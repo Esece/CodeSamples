@@ -3,5 +3,5 @@
 ### C#
 |Class Name|Namespace|Assembly|
 |----------|---------|--------|
-|NameValueCollection(https://github.com/dotnet/roslyn)|System.Collections.Specialized||
+|[NameValueCollection](https://github.com/s78/CodeSamples/blob/master/NameValueCollection.md)|System.Collections.Specialized||
 
