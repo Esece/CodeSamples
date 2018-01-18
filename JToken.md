@@ -1,13 +1,12 @@
 ### JToken
 ###### Newtonsoft.Json.Linq.JToken
 
-DeepEquals (Compare Values for Equality)
+Compare Values for Equality
 ``` csharp
-var prod1 = new Product();
-:
-
-var prod2 = new Product();
-:
-
-bool same = JToken.DeepEquals(JObject.FromObject(prod1), JObject.FromObject(prod2));
+static bool AreIdentical<T>(T a, T b)
+{
+    // objects need to be wrapped to avoid serialization error for types like Guid..
+    return JToken.DeepEquals(JObject.FromObject(new { a }), JObject.FromObject(new { b }));
+}
 ```
+
