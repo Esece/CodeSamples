@@ -1,7 +1,7 @@
 ###### System.Activator
 ### Activator
 
-default(T)
+Default value of a type
 ``` csharp
 type.IsPrimitive ? Activator.CreateInstance(type) : null
 ```
