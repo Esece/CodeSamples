@@ -1,5 +1,5 @@
-###### System.DateTime
-### DateTime
+###### System.Activator
+### Activator
 
 default(T)
 ``` csharp
