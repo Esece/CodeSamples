@@ -3,5 +3,5 @@
 
 Default value of a type
 ``` csharp
-type.IsPrimitive ? Activator.CreateInstance(type) : null
+type.IsValueType ? Activator.CreateInstance(type) : null
 ```
