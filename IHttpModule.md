@@ -25,7 +25,7 @@ public class CustomModule : IHttpModule
 }
 ```
 
-Module Registration Class
+Module Registration (Runtime)
 ``` csharp
 [assembly: PreApplicationStartMethod(typeof(ModuleRegistration), "Start")]
 
