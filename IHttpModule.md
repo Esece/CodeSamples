@@ -24,3 +24,17 @@ public class CustomModule : IHttpModule
     public void Dispose() { }
 }
 ```
+
+Module Registration Class
+``` csharp
+[assembly: PreApplicationStartMethod(typeof(ModuleRegistration), "Start")]
+
+public class ModuleRegistration
+{
+    public static void Start()
+    {
+        Microsoft.Web.Infrastructure.DynamicModuleHelper.DynamicModuleUtility.RegisterModule(typeof(CustomModule));
+    }
+}
+```
+
