@@ -1,0 +1,10 @@
+###### jQuery
+### .on()
+
+Add onclick Event
+``` javascript
+$('button').on('click' function (event) {
+    event.preventDefault();
+    console.log('clicked');
+});
+```
