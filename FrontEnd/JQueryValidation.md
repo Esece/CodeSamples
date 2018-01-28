@@ -4,7 +4,8 @@
 HTML
 ``` html
 <form action="save.html">
-  <input name="name" data-rule-required="true" data-msg-required="Name is required." />
+  <input type="text" name="name" data-rule-required="true" data-msg-required="Name is required." />
+  <button>Save</button>
 </form>
 ```
 
@@ -30,7 +31,8 @@ HTML
 ``` html
 <form action="save.html">
   <span class="errmsg"></span>
-  <input name="name" data-rule-required="true" data-msg-required="Name is required." />
+  <input type="text" name="name" data-rule-required="true" data-msg-required="Name is required." />
+  <button>Save</button>
 </form>
 ```
 ``` javascript
@@ -44,6 +46,26 @@ Use Custom Submit Handler
 $('form').validate({
   submitHandler: function (form) {
     console.log('submitted');
+    return true;
+  }
+});
+```
+
+Conditionally Validate
+HTML
+``` html
+<form action="save.html">
+  <span class="errmsg"></span>
+  <input type="checkbox" name="validate" />
+  <input type="text" name="name" data-rule-required="[name='validate']:checked" data-msg-required="Name is required." />
+  <button>Save</button>
+</form>
+```
+``` javascript
+$('form').validate({
+  submitHandler: function (form) {
+    console.log('validate checked and submitted');
+    return true;
   }
 });
 ```
