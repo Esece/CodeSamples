@@ -1,5 +1,5 @@
-###### System.Activator
-### Activator
+###### System.Convert
+### Convert
 
 Hex String to Int32
 ``` csharp
