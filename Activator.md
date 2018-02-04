@@ -1,5 +1,5 @@
-###### System.Activator
-### Activator
+##### System.Activator
+# Activator
 
 Default value of a type
 ``` csharp
