@@ -26,3 +26,25 @@ while (DateTime.UtcNow < timeout)  // repeast every second for 3 minutes..
     Thread.Sleep(1000);
 }
 ```
+
+HTTP response Date header
+``` csharp
+DateTime.UtcNow.ToString(@"ddd, dd MMM yyyy hh:mm:ss G\MT")
+```
+
+ToString("hh:mm:ss.fff")
+``` csharp
+DateTime.Now.ToString("hh:mm:ss.fff")
+```
+
+ToString("HH:mm")
+``` csharp
+DateTime.Now.ToString("HH:mm")
+```
+
+ToShortTimeString
+``` csharp
+DateTime.Now.ToShortTimeString()  // 1:41 PM;
+```
+
+
