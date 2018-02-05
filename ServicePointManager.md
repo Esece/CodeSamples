@@ -3,5 +3,10 @@
 
 DefaultConnectionLimit
 ``` csharp
-System.Net.ServicePointManager.DefaultConnectionLimit = 500;
+ServicePointManager.DefaultConnectionLimit = 500;
+```
+
+ServerCertificateValidationCallback
+``` csharp
+ServicePointManager.ServerCertificateValidationCallback += delegate { return true; };
 ```
