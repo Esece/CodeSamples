@@ -11,3 +11,9 @@ Temp File Name with Custom Extension
 ``` csharp
 var tempPdfFilePath = Path.ChangeExtension(Path.GetTempFileName(), "pdf");
 ```
+
+ChangeExtension
+``` csharp
+Path.ChangeExtension("C:\test.dat", "txt")
+```
+
