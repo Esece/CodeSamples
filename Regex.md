@@ -9,3 +9,9 @@ foreach (Match match in Regex.Matches(result, @"(<pre>)(.*?)(</pre>)"))  // cann
     Console.WriteLine(innerText);
 };
 ```
+
+Replace
+``` csharp
+Regex.Replace(null, "<.*?>", "")
+```
+
