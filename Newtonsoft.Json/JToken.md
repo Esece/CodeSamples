@@ -1,5 +1,5 @@
 ###### Newtonsoft.Json.Linq.JToken
-### JToken
+## JToken
 
 Compare Values for Equality
 ``` csharp
