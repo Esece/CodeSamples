@@ -3,5 +3,5 @@
 
 Search Files
 ``` csharp
-Directory.GetFiles(@"C:\", "test.txt", SearchOption.AllDirectories);
+Directory.GetFiles(@"C:\", "*.txt", SearchOption.AllDirectories);
 ```
