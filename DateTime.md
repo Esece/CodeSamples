@@ -32,6 +32,12 @@ HTTP response Date header
 DateTime.UtcNow.ToString(@"ddd, dd MMM yyyy hh:mm:ss G\MT")
 ```
 
+Create Local Time with UTC Offset
+``` csharp
+var offset = -360;
+new DateTime(DateTime.UtcNow.Ticks, DateTimeKind.Local).AddMinutes(offset)
+```
+
 ToString("hh:mm:ss.fff")
 ``` csharp
 DateTime.Now.ToString("hh:mm:ss.fff")
