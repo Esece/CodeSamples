@@ -1,9 +1,9 @@
-##### System.Reflection.Emit.DynamicMethod
-# DynamicMethod
+###### System.Reflection.Emit.DynamicMethod
+## DynamicMethod
 
 Starter code
 ``` csharp
-var method = new DynamicMethod("", typeof(int), new[] { typeof(int), typeof(int) });
+var method = new DynamicMethod("Add", typeof(int), new[] { typeof(int), typeof(int) });
 
 var x = method.DefineParameter(1, ParameterAttributes.In, null);
 var y = method.DefineParameter(1, ParameterAttributes.In, null);
@@ -15,4 +15,9 @@ generator.Emit(OpCodes.Add);
 generator.Emit(OpCodes.Ret);
 
 var add = (Func<int, int, int>)method.CreateDelegate(typeof(Func<int, int, int>));
+```
+
+Usage
+``` csharp
+var total = add(2, 3);  // 5
 ```
