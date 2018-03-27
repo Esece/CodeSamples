@@ -9,6 +9,7 @@ Environment.Version.ToString()  // could be "4.0.30319.42000"
 MyDocuments Folder Path (Special Folder)
 ``` csharp
 Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)  // AppData\Local
 ```
 
 Exit Application with Error Code
