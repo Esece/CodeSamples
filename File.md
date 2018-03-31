@@ -1,4 +1,4 @@
-##### System.IO
+###### System.IO.File
 ## File
 
 Remove 'ReadOnly' attribute
@@ -12,4 +12,9 @@ static void RemoveReadOnlyAttribute(string path)
         File.SetAttributes(path, attributes & ~FileAttributes.ReadOnly);
     }
 }
+```
+
+Change LastWriteTime ('Modified' in Explorer)
+``` csharp
+File.SetLastWriteTime(@"c:\text.txt", DateTime.Now.AddDays(-7));
 ```
