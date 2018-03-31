@@ -20,8 +20,6 @@ $.validator.addMethod('serverside', function (value, element) {
             value: value
         },
         success: function (response) {
-            console.log(this);
-
             if (response === true || (response !== false && !response)) {
                 validator.prepareElement(element);
                 validator.formSubmitted = validator.formSubmitted;
