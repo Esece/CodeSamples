@@ -1,6 +1,41 @@
 ##### System.IO.Compression
 ## GZipStream
 
+Compress
+``` csharp
+static byte[] Compress(byte[] data)
+{
+    using (var memoryStream = new MemoryStream())
+    {
+        using (GZipStream gzipStream = new GZipStream(memoryStream, CompressionMode.Compress, true))
+        {
+            gzipStream.Write(data, 0, data.Length);
+        }
+
+        return memoryStream.ToArray();
+    }
+}
+```
+
+Compress
+``` csharp
+static int Compress(Stream inStream, Stream outStream)
+{
+    using (var memoryStream = new MemoryStream())
+    {
+        inStream.CopyTo(memoryStream);
+
+        using (GZipStream gzipStream = new GZipStream(outStream, CompressionMode.Compress))
+        {
+            var data = memoryStream.ToArray();
+            gzipStream.Write(data, 0, data.Length);
+
+            return data.Length;
+        }
+    }
+}
+```
+
 Decompress (from stream to string)
 ``` csharp
 static string Decompress(Stream stream, Encoding encoding)
