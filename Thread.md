@@ -1,5 +1,5 @@
 ##### System.Threading.Thread
-# Thread
+## Thread
 
 Join threads
 ``` csharp
@@ -18,4 +18,14 @@ foreach (var value in values)
 }
 
 threads.ForEach(t => t.Join());
+```
+
+Get the current culture
+``` csharp
+Thread.CurrentThread.CurrentCulture
+```
+
+Get the current UI culture
+``` csharp
+Thread.CurrentThread.CurrentUICulture
 ```
