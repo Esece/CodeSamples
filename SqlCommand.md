@@ -55,3 +55,29 @@ using (var connection = new SqlConnection(""))
     }
 }
 ```
+
+With Transaction
+``` csharp
+SqlTransaction trans; 
+
+try
+{
+    using (var connection = new SqlConnection(""))
+    {
+        connection.Open();
+        trans = connection.BeginTransaction(); 
+
+        foreach (var sql in sqls)
+        {
+            var command = new SqlCommand(sql, connection, trans);
+            command.ExecuteNonQuery();
+        }
+
+        trans.Commit();     
+    }
+}
+catch
+{
+    trans.Rollback();
+}
+```
