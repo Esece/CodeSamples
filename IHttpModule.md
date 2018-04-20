@@ -38,3 +38,14 @@ public class ModuleRegistration
 }
 ```
 
+Module Registration (web.config)
+``` xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.webServer>
+    <modules>
+      <add name="CustomModule" type="CustomModule"/>
+    </modules>
+  </system.webServer>
+</configuration>
+```
