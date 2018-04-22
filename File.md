@@ -18,3 +18,13 @@ Change LastWriteTime ('Modified' in Explorer)
 ``` csharp
 File.SetLastWriteTime(@"c:\text.txt", DateTime.Now.AddDays(-7));
 ```
+
+'Created' in Explorer
+``` csharp
+File.GetCreationTime(@"c:\text.txt");
+```
+
+'Accessed' in Explorer
+``` csharp
+File.GetLastAccessTime(@"c:\text.txt");
+```
