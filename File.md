@@ -24,7 +24,11 @@ File.SetLastWriteTime(@"c:\text.txt", DateTime.Now.AddDays(-7));
 File.GetCreationTime(@"c:\text.txt");
 ```
 
+> NOTE: This is an expensive call.
+
+
 'Accessed' in Explorer
 ``` csharp
 File.GetLastAccessTime(@"c:\text.txt");
 ```
+> NOTE: This is an expensive call.
