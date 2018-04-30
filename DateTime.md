@@ -6,9 +6,9 @@ ToString("hh:mm:ss")
 DateTime.Now.ToString("hh:mm:ss")  // 07:23:40
 ```
 
-ParseExact
+ParseExact (Parsing the 'If-Modified-Since' header in HTTP request)
 ``` csharp
-DateTime.ParseExact("Fri, 26-Feb-2016 01:37:30 GMT", "ddd, dd-MMM-yyyy hh:mm:ss GMT", null)
+DateTime.ParseExact("Fri, 26-Feb-2016 01:37:30 GMT", "ddd, dd-MMM-yyyy hh:mm:ss GMT", null, DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal)
 ```
 
 TryParseExact
