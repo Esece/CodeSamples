@@ -11,6 +11,11 @@ Serialize with Indentation
 JsonConvert.SerializeObject(value, Formatting.Indented)
 ```
 
+Pretty Print JSON (String)
+``` csharp
+JsonConvert.SerializeObject(JsonConvert.DeserializeObject(json), Newtonsoft.Json.Formatting.Indented);
+```
+
 Deep Copy using JSON Serialization
 ``` csharp
 static T DeepClone<T>(T obj)
