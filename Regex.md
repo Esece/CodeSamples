@@ -23,3 +23,7 @@ var matchFound = Regex.IsMatch(multilineText, "line.*?line", RegexOptions.Single
 
 > **Extremely confusing, but the dot expression does NOT work with 'RegexOptions.Multiline'**
 
+Regex Escape
+``` csharp
+Regex.Escape("[12.34]")  // \[12\.34]
+```
