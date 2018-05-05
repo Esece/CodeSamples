@@ -15,3 +15,11 @@ Replace
 Regex.Replace(null, "<.*?>", "")
 ```
 
+"Singleline" Mode for Multiline Text Matching
+``` csharp
+var multilineText = String.Join("\r\n", "line1", "line2");
+var matchFound = Regex.IsMatch(multilineText, "line.*?line", RegexOptions.Singleline);  // true  
+```
+
+> **Extremely confusing, but the dot expression does NOT work with 'RegexOptions.Multiline'**
+
