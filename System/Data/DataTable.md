@@ -1,5 +1,5 @@
 ##### System.Data.DataTable
-# DataTable
+## DataTable
 
 Compute (hidden gem)
 ``` csharp
