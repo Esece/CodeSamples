@@ -1,0 +1,9 @@
+## IDENTITY_INSERT
+
+``` sql
+SET IDENTITY_INSERT [TABLE_NAME] ON
+
+-- insert statements
+
+SET IDENTITY_INSERT [TABLE_NAME] OFF
+```
