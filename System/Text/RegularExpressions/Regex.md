@@ -32,4 +32,4 @@ By Examples (C#)
 
 |Description|Value|Pattern|Result|
 |-----|-----|-----|-----|
-|Extract index|"Labels[5]"|@"([a-zA-Z_][a-zA-Z0-9_]*\\[)(\d+)(\])$"|5|
+|Extract index|"Labels[5]"|@"([a-zA-Z_][a-zA-Z0-9_]*\\[)(\d+)(\\])$"|5|
