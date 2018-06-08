@@ -27,3 +27,9 @@ Regex Escape
 ``` csharp
 Regex.Escape("[12.34]")  // \[12\.34]
 ```
+
+By Examples (C#)
+
+|Description|Value|Pattern|Result|
+|-----|-----|-----|-----|
+|Extract index|"Labels[5]"|@"([a-zA-Z_][a-zA-Z0-9_]*\\[)(\d+)(\])$"|5|
