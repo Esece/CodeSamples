@@ -18,6 +18,16 @@ DateTime.TryParseExact("2018-11-10", "yyyy-MM-dd", null, DateTimeStyles.AssumeLo
 DateTime.TryParseExact("2018-11-10 15:55:25", "yyyy-MM-dd HH:mm:ss", null, DateTimeStyles.None, out var dateTime)
 ```
 
+Parsing Time for TimeSpan
+``` csharp
+var dateTime = DateTime.ParseExact(text, "h:mm tt", CultureInfo.InvariantCulture);
+TimeSpan span = dateTime.TimeOfDay;
+
+
+DateTime.TryParseExact("11:59 AM", "h:mm tt", null, System.Globalization.DateTimeStyles.None, out var dateTime)
+TimeSpan span = dateTime.TimeOfDay;
+```
+
 Ad hoc Repeater 
 ``` csharp
 var timeout = DateTime.UtcNow.AddMinutes(3);
