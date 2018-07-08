@@ -10,3 +10,8 @@ Int32 to Bit String
 ``` csharp
 Convert.ToString(4, 2).PadLeft(32, '0')  // 00000000000000000000000000000101
 ```
+
+Null-safe
+``` csharp
+Convert.ToDecimal(null)  // returns 0m
+```
