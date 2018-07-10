@@ -11,6 +11,11 @@ ParseExact (Parsing the 'If-Modified-Since' header in HTTP request)
 DateTime.ParseExact("Fri, 26-Feb-2016 01:37:30 GMT", "ddd, dd-MMM-yyyy hh:mm:ss GMT", null, DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal)
 ```
 
+Parse ISO8601 UTC format (DateTime.Kind == DateTimeKind.Utc)
+``` csharp
+DateTime.ParseExact(dateTime, "yyyy-MM-ddTHH:mm:ssZ", null, DateTimeStyles.AdjustToUniversal)
+```
+
 TryParseExact
 ``` csharp
 DateTime.TryParseExact("01/03/2018", "MM/dd/yyyy", null, DateTimeStyles.None, out var dateTime)
