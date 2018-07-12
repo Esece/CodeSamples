@@ -16,6 +16,12 @@ Parse ISO8601 UTC format (DateTime.Kind == DateTimeKind.Utc)
 DateTime.ParseExact(dateTime, "yyyy-MM-ddTHH:mm:ssZ", null, DateTimeStyles.AdjustToUniversal)
 ```
 
+Parse a quoted string
+``` csharp
+var dateTime = "\"2018-01-30\"";
+DateTime.Parse(dateTime, "\\\"yyyy-MM-dd\\\"")  // escape a double-quote with a backslash in a format
+```
+
 TryParseExact
 ``` csharp
 DateTime.TryParseExact("01/03/2018", "MM/dd/yyyy", null, DateTimeStyles.None, out var dateTime)
