@@ -11,3 +11,8 @@ Hex String
 ``` csharp
 65000.ToString("x")  // fde8
 ```
+
+ToString() with Escaped Numeric Characters
+``` csharp
+5.ToString("00'00'")  // "0500"
+```
