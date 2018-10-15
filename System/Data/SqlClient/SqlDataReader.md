@@ -17,6 +17,7 @@ using (var connection = new SqlConnection(""))
             while (reader.Read())
             {
                 var str = (string)reader[0];
+		var img = (byte[])reader[1];
             }
         }
     }
