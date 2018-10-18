@@ -12,7 +12,12 @@ foreach (Match match in Regex.Matches(result, @"(<pre>)(.*?)(</pre>)"))  // cann
 
 Replace
 ``` csharp
-Regex.Replace(null, "<.*?>", "")
+Regex.Replace(value, "<.*?>", "")
+```
+
+Replace (complex)
+``` csharp
+Regex.Replace(value, "<.*?>", m => m.Value.ToUpper())  // replace with all caps
 ```
 
 "Singleline" Mode for Multiline Text Matching
