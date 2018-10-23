@@ -31,3 +31,37 @@ static T DeepClone<T>(T obj)
     return JsonConvert.DeserializeObject<T>(json, settings);
 }
 ```
+
+Read Values
+``` csharp
+string json = @"{
+  ""created_at"": ""2010-12-25T13:35:39Z"",
+  ""is_return"": true,
+  ""id"": 123456, 
+  ""messages"": [
+    {
+      ""type"": ""error"",
+      ""message"": ""Unable to locate""
+    }
+  ],
+}";
+
+var responseJson = (JObject)JsonConvert.DeserializeObject(json);
+
+var created_at = responseJson["created_at"].Value<DateTime>();  // 12/25/2010 1:35:39 PM
+
+var is_return = responseJson["is_return"] != null ? responseJson["is_return"].Value<bool>() : false;  // true
+
+var id = responseJson["id"].Value<int>();  // 123456
+var idLong = responseJson["id"].Value<long>();  // 123456L
+
+var message = responseJson["messages"][0]["message"].Value<string>();  // "Unable to locate the shipper_id: fghj"
+message = responseJson["messages"][0]["message"].Value<string>();  // "Unable to locate the shipper_id: fghj"
+
+var array = (JArray)responseJson["messages"];
+
+foreach (JObject element in array)
+{
+    message = element["message"].Value<string>();  // "Unable to locate the shipper_id: fghj"
+}
+```
