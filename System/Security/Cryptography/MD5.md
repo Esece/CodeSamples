@@ -1,5 +1,5 @@
 ###### System.Security.Cryptography.MD5
-### MD5
+## MD5
 
 Get MD5 Hash
 ``` csharp
