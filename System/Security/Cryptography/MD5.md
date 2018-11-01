@@ -10,3 +10,11 @@ static string GetMD5HashString(string value)
     return new String(hash.SelectMany(h => h.ToString("x2")).ToArray());
 }
 ```
+
+Generate GUID
+``` csharp
+static Guid GenerateGuid(string value)
+{
+    return new Guid(MD5.Create().ComputeHash(Encoding.UTF8.GetBytes(value)));
+}
+```
