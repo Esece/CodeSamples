@@ -10,3 +10,4 @@ var encoded = HttpServerUtility.UrlTokenEncode(bytes);  // "cHVibGljIGNsYXNzIFRl
 
 var decoded = HttpServerUtility.UrlTokenDecode(encoded);
 ```
+> Recommended for a web request. Avoid using Convert.ToBase64String(byte[])
