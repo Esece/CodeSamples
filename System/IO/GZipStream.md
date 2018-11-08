@@ -1,7 +1,7 @@
 ##### System.IO.Compression
 ## GZipStream
 
-Compress
+Compress (byte[] to byte[])
 ``` csharp
 static byte[] Compress(byte[] data)
 {
@@ -17,7 +17,7 @@ static byte[] Compress(byte[] data)
 }
 ```
 
-Compress
+Compress (with streams)
 ``` csharp
 static int Compress(Stream inStream, Stream outStream)
 {
@@ -36,7 +36,7 @@ static int Compress(Stream inStream, Stream outStream)
 }
 ```
 
-Decompress (from stream to string)
+Decompress (stream to string)
 ``` csharp
 static string Decompress(Stream stream, Encoding encoding)
 {
@@ -50,7 +50,7 @@ static string Decompress(Stream stream, Encoding encoding)
 }
 ```
 
-Decompress (from byte array to byte array)
+Decompress (byte[] to byte[])
 ``` csharp
 static byte[] Decompress(byte[] data)
 {
@@ -68,7 +68,7 @@ static byte[] Decompress(byte[] data)
 }
 ```
 
-Decompress (from byte array to string)
+Decompress (byte[] to string)
 ``` csharp
 static string Decompress(byte[] data, Encoding encoding)
 {
