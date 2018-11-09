@@ -21,8 +21,9 @@ Decompress (byte[] to byte[])
 static byte[] Decompress(byte[] data)
 {
     var output = new MemoryStream();
+    var input = new MemoryStream(data);
     
-    using (var deflateStream = new DeflateStream(new MemoryStream(data), CompressionMode.Decompress))
+    using (var deflateStream = new DeflateStream(input, CompressionMode.Decompress))
     {
         deflateStream.CopyTo(output);
     }
