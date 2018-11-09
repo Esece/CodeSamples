@@ -18,7 +18,7 @@ static byte[] Compress(byte[] data)
 
 Decompress (byte[] to byte[])
 ``` csharp
-static byte[] Compress(byte[] data)
+static byte[] Decompress(byte[] data)
 {
     var output = new MemoryStream();
     
