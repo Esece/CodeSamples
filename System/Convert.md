@@ -15,3 +15,13 @@ Null-safe
 ``` csharp
 Convert.ToDecimal(null)  // returns 0m
 ```
+
+Convert to Bit String
+``` csharp
+ToBitString(Guid.NewGuid().ToByteArray())  // 01110100101...10000
+
+static string ToBitString(byte[] bytes)
+{
+    return new String(bytes.SelectMany(b => Convert.ToString(b, 2).PadLeft(8, '0').ToCharArray()).ToArray());
+}
+```
