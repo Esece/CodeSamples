@@ -5,7 +5,7 @@ Compress (byte[] to byte[])
 ``` csharp
 static byte[] Compress(byte[] data)
 {
-    var memoryStream = new MemoryStream()
+    var memoryStream = new MemoryStream();
 
     using (var deflateStream = new DeflateStream(memoryStream, CompressionMode.Compress))  // use CompressionLevel.Optimal for smaller bytes
     {
