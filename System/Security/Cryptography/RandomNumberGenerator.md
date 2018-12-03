@@ -4,7 +4,10 @@
 Unbiased Random GUID
 ``` csharp
 var bytes = new byte[16];
-RandomNumberGenerator.Create().GetBytes(bytes);
+using (var random = RandomNumberGenerator.Create())
+{
+    random.GetBytes(bytes);
+}
 var unbiasedGuid = new Guid(bytes);
 ```
 
