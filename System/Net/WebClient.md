@@ -49,3 +49,14 @@ using (var fileStream = new WebClient().OpenRead("http://www2.census.gov/geo/doc
 
 Console.WriteLine(data);
 ```
+
+Manually Set Authorization Header to AVOID Unwanted HTTP 401 Response
+``` csharp
+var encoded = Convert.ToBase64String(Encoding.UTF8.GetBytes($"{username}:{password}"));
+var wc = new WebClient();
+wc.Headers["Authorization"] = "Basic " + encoded;
+
+
+wc.Crendentials = new NetworkCredential(username, password);  // this will first make a call for a 401 result (to discover)...
+```
+
