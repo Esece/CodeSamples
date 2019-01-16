@@ -33,6 +33,37 @@ Regex Escape
 Regex.Escape("[12.34]")  // \[12\.34]
 ```
 
+List All Supported Patterns
+``` csharp
+var patterns = new[]
+{
+    @"\w",
+    @"\d",
+    @"\s",
+    @"\W",
+    @"\D",
+    @"\S",
+    @".",
+    @"[0-9]",
+    @"[a-z]",
+    @"[0-9A-Za-z]",
+};
+
+foreach (var p in patterns)
+{
+    Console.WriteLine(p);
+    var cs = GetSupportedChars(p);
+    new String(cs.Select(c => c <= 0x1f ? ' ' : c).ToArray()).Dump();
+}
+
+static char[] GetSupportedChars(string pattern)
+{
+    char maxChar = (char)127;  // limit to ascii
+    var chars = Enumerable.Range(0, maxChar).Select(i => (char)i);
+    return chars.Where(c => Regex.IsMatch(c.ToString(), pattern)).ToArray();
+}
+```
+
 By Examples (C#)
 
 |Description|Value|Pattern|Result|
