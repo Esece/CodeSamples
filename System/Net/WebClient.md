@@ -57,6 +57,6 @@ var wc = new WebClient();
 wc.Headers["Authorization"] = "Basic " + encoded;
 
 
-wc.Crendentials = new NetworkCredential(username, password);  // this will first make a call for a 401 result (to discover)...
+wc.Credentials = new NetworkCredential(username, password);  // this will first make a call for a 401 result (to discover)...
 ```
 
