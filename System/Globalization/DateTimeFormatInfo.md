@@ -20,3 +20,9 @@ Enumerable.Range(1, 12).ToDictionary(i => String.Format("({0}) {1}", i.ToString(
 (12) December, 12
 */
 ```
+
+Universal Date Format 
+``` csharp
+var format = new System.Globalization.DateTimeFormatInfo().UniversalSortableDateTimePattern.Replace(" ", "T");
+DateTime.UtcNow.ToString(format)  // 2018-03-18T12:13:45Z
+```
